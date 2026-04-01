@@ -1,53 +1,83 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import LogosStrip from "@/components/LogosStrip";
 import PositioningStrip from "@/components/PositioningStrip";
 import ValuePillars from "@/components/ValuePillars";
 import ProductStory from "@/components/ProductStory";
+import BeforeAfter from "@/components/BeforeAfter";
 import OutcomeStrip from "@/components/OutcomeStrip";
 import Method from "@/components/Method";
+import Deliverables from "@/components/Deliverables";
+import IsThisForYou from "@/components/IsThisForYou";
 import Results from "@/components/Results";
+import InsightsTeaser from "@/components/InsightsTeaser";
+import FAQ from "@/components/FAQ";
+import About from "@/components/About";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
+import ScrollProgress from "@/components/ScrollProgress";
 import { productStories } from "@/lib/data";
 
 export default function HomePage() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
 
       <main>
-        {/* 01 — Hero */}
+        {/* 01 Hero */}
         <Hero />
 
-        {/* 02 — Positioning strip */}
+        {/* 02 Client logos */}
+        <LogosStrip />
+
+        {/* 03 Positioning */}
         <PositioningStrip />
 
-        {/* 03 — Value pillars */}
+        {/* 04 Value pillars */}
         <ValuePillars />
 
-        {/* 04–07 — Product stories */}
+        {/* 05–08 Product stories */}
         {productStories.map((story, i) => (
-          <ProductStory
-            key={story.id}
-            story={story}
-            alt={i % 2 !== 0}
-          />
+          <ProductStory key={story.id} story={story} alt={i % 2 !== 0} />
         ))}
 
-        {/* 08 — Outcome strip */}
+        {/* 09 Before / After */}
+        <BeforeAfter />
+
+        {/* 10 Outcomes */}
         <OutcomeStrip />
 
-        {/* 09 — Method */}
+        {/* 11 Method */}
         <Method />
 
-        {/* 10 — Results */}
+        {/* 12 Deliverables / Pricing */}
+        <Deliverables />
+
+        {/* 13 Is this for you */}
+        <IsThisForYou />
+
+        {/* 14 Results */}
         <Results />
 
-        {/* 11 — Final CTA */}
+        {/* 15 About David */}
+        <About />
+
+        {/* 16 Insights */}
+        <InsightsTeaser />
+
+        {/* 17 FAQ */}
+        <FAQ />
+
+        {/* 18 Final CTA */}
         <FinalCTA />
       </main>
 
       <Footer />
+
+      {/* Floating: WhatsApp + mobile sticky bar */}
+      <FloatingCTA />
     </>
   );
 }
