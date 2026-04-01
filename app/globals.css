@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-poppins: 'Poppins', system-ui, sans-serif;
+
+  /* Brand tokens */
+  --bg: #0F0D0C;
+  --bg-surface: #24211F;
+  --bg-alt: #1A1714;
+  --bg-elevated: #2E2B28;
+  --accent: #EDA58D;
+  --accent-dim: rgba(237, 165, 141, 0.12);
+  --accent-border: rgba(237, 165, 141, 0.20);
+  --accent-glow: rgba(237, 165, 141, 0.25);
+  --neutral: #E9E6E3;
+  --neutral-muted: #A09890;
+  --neutral-faint: #6B6360;
+  --neutral-border: rgba(233, 230, 227, 0.08);
+  --neutral-border2: rgba(233, 230, 227, 0.05);
+
+  /* Status */
+  --status-green: #4ADE80;
+  --status-green-dim: rgba(74, 222, 128, 0.12);
+  --status-amber: #FBBF24;
+  --status-amber-dim: rgba(251, 191, 36, 0.12);
+  --status-red: #F87171;
+  --status-red-dim: rgba(248, 113, 113, 0.12);
+  --status-blue: #60A5FA;
+  --status-blue-dim: rgba(96, 165, 250, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background-color: var(--bg);
+  color: var(--neutral);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--neutral-faint); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--neutral-muted); }
+
+/* Selection */
+::selection {
+  background: rgba(237, 165, 141, 0.25);
+  color: var(--neutral);
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Base link reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.container-sm {
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+/* Mockup base styles */
+.mockup-chrome {
+  background: var(--bg-surface);
+  border: 1px solid var(--neutral-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(233,230,227,0.06);
+}
+
+.mockup-topbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--neutral-border2);
+  background: rgba(255,255,255,0.015);
+}
+
+.mockup-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+/* Status dot */
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Tag / pill resets */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Gradient overlays for mockup fade effect */
+.mockup-fade-bottom {
+  position: relative;
+}
+.mockup-fade-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+
+/* Section transition rhythm */
+.section-bg-alt {
+  background-color: var(--bg-alt);
+}
+
+/* Thin separator */
+.separator {
+  height: 1px;
+  background: var(--neutral-border);
+}
+
+@layer utilities {
+  .text-accent { color: var(--accent); }
+  .text-muted { color: var(--neutral-muted); }
+  .text-faint { color: var(--neutral-faint); }
+  .bg-surface { background-color: var(--bg-surface); }
+  .bg-alt { background-color: var(--bg-alt); }
+  .border-neutral { border-color: var(--neutral-border); }
+  .border-accent { border-color: var(--accent-border); }
+}
