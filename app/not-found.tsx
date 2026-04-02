@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CALENDLY_URL } from "@/lib/data";
 
 export default function NotFound() {
@@ -12,9 +13,9 @@ export default function NotFound() {
           The page you&apos;re looking for doesn&apos;t exist. It may have moved, or the link might be incorrect.
         </p>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-          <a href="/" style={{ fontSize: 14, fontWeight: 600, padding: "13px 28px", borderRadius: 7, background: "var(--accent)", color: "var(--bg)", textDecoration: "none" }}>
+          <Link href="/" style={{ fontSize: 14, fontWeight: 600, padding: "13px 28px", borderRadius: 7, background: "var(--accent)", color: "var(--bg)", textDecoration: "none" }}>
             Back to Homepage
-          </a>
+          </Link>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, fontWeight: 500, padding: "13px 28px", borderRadius: 7, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)", color: "var(--neutral)", textDecoration: "none" }}>
             Book a Call
           </a>
