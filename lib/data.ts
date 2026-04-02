@@ -1,10 +1,7 @@
-// ============================================================
-// ARISE GROWTH — DATA LAYER (UPDATED v2)
-// ============================================================
-
 export const CALENDLY_URL = "https://calendly.com/arisegrowth/30min";
 export const WHATSAPP_URL = "https://wa.me/972528982780";
-export const LINKEDIN_URL = "https://linkedin.com/in/david-swissa";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/david-swissa/";
+export const FORMSPREE_ID = "xreolwva";
 
 export const navLinks = [
   { label: "Systems", href: "#systems" },
@@ -50,10 +47,10 @@ export const methodPhases = [
 ];
 
 export const testimonials = [
-  { before: "Four separate tools, no shared visibility. The operations manager spent every Monday morning assembling a status report by hand from three different spreadsheets.", quote: "Before Arise Growth, we had four different systems and nobody knew what the status of anything was. Now our entire operations run through one place. The clarity is remarkable.", name: "Ronen A.", role: "CEO", company: "Tamuz Facility Services", metric: "60%", metricLabel: "reduction in coordination time" },
-  { before: "Every manager was doing 3 hours of manual status reporting per week. Nothing was automated. Client updates were sent from memory, not from data.", quote: "The automation layer alone saved us three hours of manual work per manager per week. More importantly, nothing falls through the cracks anymore.", name: "Shira M.", role: "Operations Director", company: "GreenLine Logistics", metric: "3 hrs", metricLabel: "saved per manager, per week" },
-  { before: "New hire onboarding took five days of scattered verbal handoffs and Google Docs nobody remembered to update. Every new employee had a different experience.", quote: "We went from onboarding a new hire in five days of scattered handoffs to one automated day. The system just runs it.", name: "Tal B.", role: "Head of People", company: "Apex Staffing Group", metric: "5→1", metricLabel: "days to onboard a new hire" },
-  { before: "Leadership had no live view of the operation. The weekly update was a 45-minute meeting just to understand current status — before any decisions were made.", quote: "Our leadership team now has a live view of the entire operation every morning. We make better decisions faster. It's the infrastructure we should have built two years ago.", name: "Amir D.", role: "COO", company: "Veridian Technology Services", metric: "1 view", metricLabel: "of the entire operation, live" },
+  { before: "Running a carpentry and manufacturing operation with no real system. orders, production status, and supplier coordination all managed through WhatsApp and verbal handoffs.", quote: ""We always knew things were falling through the cracks, but we didn't realize how much until we saw it mapped out. Arise Growth built us a system that finally gives us control over what's happening on the floor and with clients, at the same time."", name: "David B.", role: "CEO", company: "Manufacturing Company, Hertzelia", metric: "One system", metricLabel: "for production, clients, and suppliers" },
+  { before: "A growing aluminum systems contractor with projects running in parallel. each one managed differently, no unified view, no way to track status without calling someone.", quote: ""When you're running multiple projects across different sites, you need visibility. We didn't have it before. Now our entire operation goes through one place, who owns what, what's stuck, what's next. It changed how we manage the business."", name: "Ben G.", role: "CEO", company: "Aluminum Systems Contractor, Tel-Aviv", metric: "Full visibility", metricLabel: "across all active projects, in real time" },
+  { before: "Scheduling and dispatch were done manually: calls, texts, and a shared whiteboard that nobody kept updated.", quote: ""The system Arise Growth built replaced three hours of daily coordination work. Our field teams know exactly where to be and what to do without anyone having to chase them."", name: "Tal B.", role: "Operations Director", company: "Field Service Company, Israel", metric: "3 hrs", metricLabel: "saved in daily coordination, per manager" },
+  { before: "Onboarding new employees was inconsistent. every manager did it differently, nothing was documented, and new hires were left to figure things out alone.", quote: ""What used to take a week of scattered handoffs now runs on its own. Every new hire goes through the same structured process from day one. It's one of the things I'm most proud of in how we run the business now."", name: "Michal R.", role: "COO", company: "Staffing & Workforce Company, Israel", metric: "5→1", metricLabel: "days to fully onboard a new hire" },
 ];
 
 export const faqItems = [
@@ -62,26 +59,14 @@ export const faqItems = [
   { question: "Do we need technical knowledge to use these systems?", answer: "None. We handle the full setup and configure everything for your team's actual technical level. Training is included in every engagement. Our goal is that your least technical team member can navigate the system confidently by go-live." },
   { question: "How long does implementation take?", answer: "Quick Win engagements take 2 weeks. Operations Sprint projects take 4–6 weeks. Control Tower builds are scoped individually in the Characterization session. You receive a clear delivery timeline before any work begins — and we hold to it." },
   { question: "Will my team actually adopt this system?", answer: "This is the most important question, and it's exactly why our background matters. We are trained in human behavior and change management. Every system we design is built around how your people actually work — not how a manual says they should. Adoption is a design problem, not a training problem." },
-  { question: "What happens after the project ends?", answer: "Control Tower engagements include structured monthly support. Quick Win and Operations Sprint clients can add optional retainer packages. You are never handed a system and left to manage it alone — we back you up through go-live and beyond." },
-  { question: "How much does it cost?", answer: "Quick Win engagements start from ₪2,500. Operations Sprint projects start from ₪6,500. Control Tower builds typically range from ₪15,000 to ₪40,000 depending on complexity. Every engagement begins with a free Intro Call, and no scope is finalized until after the paid Characterization session." },
-  { question: "Do you work with companies outside Israel?", answer: "Our primary focus is Israeli SMBs, and we conduct all work in Hebrew or English. We can work remotely with international clients if the operational challenge is the right fit — book an Intro Call and we'll tell you within the first 10 minutes." },
+  { question: "What happens after the project ends?", answer: "Control Tower engagements include structured monthly support. Quick Win and Operations Sprint clients can add optional retainer packages. You are never handed a system and left to manage it alone." },
+  { question: "How much does it cost?", answer: "Quick Win engagements start from ₪2,500. Operations Sprint projects start from ₪6,500. Control Tower builds typically range from ₪15,000 to ₪40,000 depending on complexity. Every engagement begins with a free Intro Call." },
+  { question: "Do you work with companies outside Israel?", answer: "Our primary focus is Israeli SMBs, and we conduct all work in Hebrew or English. We can work remotely with international clients if the operational challenge is the right fit." },
 ];
 
 export const isThisForYou = {
-  yes: [
-    "You have between 10 and 150 employees",
-    "Operations still run on WhatsApp and spreadsheets",
-    "You've tried to fix this internally and it didn't stick",
-    "You want a system that runs without constant management",
-    "Leadership has limited visibility across the business",
-    "Follow-up is still done manually by people",
-  ],
-  no: [
-    "You're a solo operator with no team",
-    "You already have a structured operational system running",
-    "You're looking for general business strategy consulting",
-    "You want someone to manage your operations permanently",
-  ],
+  yes: ["You have between 10 and 150 employees", "Operations still run on WhatsApp and spreadsheets", "You've tried to fix this internally and it didn't stick", "You want a system that runs without constant management", "Leadership has limited visibility across the business", "Follow-up is still done manually by people"],
+  no: ["You're a solo operator with no team", "You already have a structured operational system running", "You're looking for general business strategy consulting", "You want someone to manage your operations permanently"],
 };
 
 export const deliverables = [
@@ -100,11 +85,11 @@ export const beforeAfterItems = [
 ];
 
 export const clientLogos = [
-  { name: "Tamuz Facility Services", abbr: "TFS" },
-  { name: "GreenLine Logistics", abbr: "GL" },
-  { name: "Apex Staffing Group", abbr: "ASG" },
-  { name: "Veridian Technology", abbr: "VT" },
-  { name: "Keter Security", abbr: "KS" },
+  { name: "Client 1", abbr: "C1" },
+  { name: "Client 2", abbr: "C2" },
+  { name: "Client 3", abbr: "C3" },
+  { name: "Client 4", abbr: "C4" },
+  { name: "Client 5", abbr: "C5" },
 ];
 
 export const insights = [
