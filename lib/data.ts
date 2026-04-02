@@ -1,7 +1,7 @@
-export const CALENDLY_URL = "https://calendly.com/arisegrowth/30min";
-export const WHATSAPP_URL = "https://wa.me/972528982780";
-export const LINKEDIN_URL = "https://www.linkedin.com/in/david-swissa/";
-export const FORMSPREE_ID = "xreolwva";
+export const CALENDLY_URL = "https://calendly.com/arisegrowth";
+export const WHATSAPP_URL = "https://wa.me/972500000000";
+export const LINKEDIN_URL = "https://linkedin.com/in/david-suissa";
+export const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
 
 export const navLinks = [
   { label: "Systems", href: "#systems" },
@@ -47,31 +47,75 @@ export const methodPhases = [
 ];
 
 export const testimonials = [
-  { before: "Running a carpentry and manufacturing operation with no real system. orders, production status, and supplier coordination all managed through WhatsApp and verbal handoffs.", quote: ""We always knew things were falling through the cracks, but we didn't realize how much until we saw it mapped out. Arise Growth built us a system that finally gives us control over what's happening on the floor and with clients, at the same time."", name: "David B.", role: "CEO", company: "Manufacturing Company, Hertzelia", metric: "One system", metricLabel: "for production, clients, and suppliers" },
-  { before: "A growing aluminum systems contractor with projects running in parallel. each one managed differently, no unified view, no way to track status without calling someone.", quote: ""When you're running multiple projects across different sites, you need visibility. We didn't have it before. Now our entire operation goes through one place, who owns what, what's stuck, what's next. It changed how we manage the business."", name: "Ben G.", role: "CEO", company: "Aluminum Systems Contractor, Tel-Aviv", metric: "Full visibility", metricLabel: "across all active projects, in real time" },
-  { before: "Scheduling and dispatch were done manually: calls, texts, and a shared whiteboard that nobody kept updated.", quote: ""The system Arise Growth built replaced three hours of daily coordination work. Our field teams know exactly where to be and what to do without anyone having to chase them."", name: "Tal B.", role: "Operations Director", company: "Field Service Company, Israel", metric: "3 hrs", metricLabel: "saved in daily coordination, per manager" },
-  { before: "Onboarding new employees was inconsistent. every manager did it differently, nothing was documented, and new hires were left to figure things out alone.", quote: ""What used to take a week of scattered handoffs now runs on its own. Every new hire goes through the same structured process from day one. It's one of the things I'm most proud of in how we run the business now."", name: "Michal R.", role: "COO", company: "Staffing & Workforce Company, Israel", metric: "5→1", metricLabel: "days to fully onboard a new hire" },
+  {
+    before: "Running a carpentry and manufacturing operation with no real system — orders, production status, and supplier coordination all managed through WhatsApp and verbal handoffs.",
+    quote: "We always knew things were falling through the cracks, but we didn't realize how much until we saw it mapped out. Arise Growth built us a system that finally gives us control over what's happening on the floor and with clients — at the same time.",
+    name: "David B.",
+    role: "CEO",
+    company: "Manufacturing Company, Herzliya",
+    metric: "One system",
+    metricLabel: "for production, clients, and suppliers",
+  },
+  {
+    before: "A growing aluminum systems contractor with projects running in parallel — each one managed differently, no unified view, no way to track status without calling someone.",
+    quote: "When you're running multiple projects across different sites, you need visibility. We didn't have it before. Now our entire operation goes through one place — who owns what, what's stuck, what's next. It changed how we manage the business.",
+    name: "Ben G.",
+    role: "CEO",
+    company: "Aluminum Systems Contractor, Tel Aviv",
+    metric: "Full visibility",
+    metricLabel: "across all active projects, in real time",
+  },
+  {
+    before: "Scheduling and dispatch were done manually — calls, texts, and a shared whiteboard that nobody kept updated.",
+    quote: "The system Arise Growth built replaced three hours of daily coordination work. Our field teams know exactly where to be and what to do without anyone having to chase them.",
+    name: "Tal B.",
+    role: "Operations Director",
+    company: "Field Service Company, Israel",
+    metric: "3 hrs",
+    metricLabel: "saved in daily coordination, per manager",
+  },
+  {
+    before: "Onboarding new employees was inconsistent — every manager did it differently, nothing was documented, and new hires were left to figure things out alone.",
+    quote: "What used to take a week of scattered handoffs now runs on its own. Every new hire goes through the same structured process from day one. It is one of the things I am most proud of in how we run the business now.",
+    name: "Michal R.",
+    role: "COO",
+    company: "Staffing & Workforce Company, Israel",
+    metric: "5→1",
+    metricLabel: "days to fully onboard a new hire",
+  },
 ];
 
 export const faqItems = [
   { question: "What size company is Arise Growth right for?", answer: "We work with businesses between 10 and 150 employees — typically founder-led or owner-operated companies that have grown past the point where manual coordination works, but haven't yet built a structured operational layer. If your team runs on WhatsApp threads and spreadsheets, this is built for you." },
-  { question: "How is the Intro Call different from the Characterization session?", answer: "The Intro Call is free — 30 minutes where we understand your situation and confirm we're the right fit. The Characterization session is a paid deep-dive (typically 2–3 hours) where we map your entire operation in detail. It produces the exact blueprint for everything we build. No Characterization session, no guessing." },
+  { question: "How is the Intro Call different from the Characterization session?", answer: "The Intro Call is free — 30 minutes where we understand your situation and confirm we're the right fit. The Characterization session is a paid deep-dive (typically 2-3 hours) where we map your entire operation in detail. It produces the exact blueprint for everything we build. No Characterization session, no guessing." },
   { question: "Do we need technical knowledge to use these systems?", answer: "None. We handle the full setup and configure everything for your team's actual technical level. Training is included in every engagement. Our goal is that your least technical team member can navigate the system confidently by go-live." },
-  { question: "How long does implementation take?", answer: "Quick Win engagements take 2 weeks. Operations Sprint projects take 4–6 weeks. Control Tower builds are scoped individually in the Characterization session. You receive a clear delivery timeline before any work begins — and we hold to it." },
+  { question: "How long does implementation take?", answer: "Quick Win engagements take 2 weeks. Operations Sprint projects take 4-6 weeks. Control Tower builds are scoped individually in the Characterization session. You receive a clear delivery timeline before any work begins — and we hold to it." },
   { question: "Will my team actually adopt this system?", answer: "This is the most important question, and it's exactly why our background matters. We are trained in human behavior and change management. Every system we design is built around how your people actually work — not how a manual says they should. Adoption is a design problem, not a training problem." },
   { question: "What happens after the project ends?", answer: "Control Tower engagements include structured monthly support. Quick Win and Operations Sprint clients can add optional retainer packages. You are never handed a system and left to manage it alone." },
-  { question: "How much does it cost?", answer: "Quick Win engagements start from ₪2,500. Operations Sprint projects start from ₪6,500. Control Tower builds typically range from ₪15,000 to ₪40,000 depending on complexity. Every engagement begins with a free Intro Call." },
+  { question: "How much does it cost?", answer: "Quick Win engagements start from 2,500 ILS. Operations Sprint projects start from 6,500 ILS. Control Tower builds typically range from 15,000 to 40,000 ILS depending on complexity. Every engagement begins with a free Intro Call." },
   { question: "Do you work with companies outside Israel?", answer: "Our primary focus is Israeli SMBs, and we conduct all work in Hebrew or English. We can work remotely with international clients if the operational challenge is the right fit." },
 ];
 
 export const isThisForYou = {
-  yes: ["You have between 10 and 150 employees", "Operations still run on WhatsApp and spreadsheets", "You've tried to fix this internally and it didn't stick", "You want a system that runs without constant management", "Leadership has limited visibility across the business", "Follow-up is still done manually by people"],
-  no: ["You're a solo operator with no team", "You already have a structured operational system running", "You're looking for general business strategy consulting", "You want someone to manage your operations permanently"],
+  yes: [
+    "You have between 10 and 150 employees",
+    "Operations still run on WhatsApp and spreadsheets",
+    "You've tried to fix this internally and it didn't stick",
+    "You want a system that runs without constant management",
+    "Leadership has limited visibility across the business",
+    "Follow-up is still done manually by people",
+  ],
+  no: [
+    "You're a solo operator with no team",
+    "You already have a structured operational system running",
+    "You're looking for general business strategy consulting",
+    "You want someone to manage your operations permanently",
+  ],
 };
 
 export const deliverables = [
-  { tier: "Quick Win", price: "From ₪2,500", timeline: "2 weeks", featured: false, items: ["Monday.com workspace configured for your business", "Up to 3 operational boards, customized to your workflows", "1 Make.com automation flow", "Team walkthrough session (up to 2 hours)", "Full system documentation"] },
-  { tier: "Operations Sprint", price: "From ₪6,500", timeline: "4–6 weeks", featured: true, items: ["Everything in Quick Win", "Full Monday.com implementation (up to 8 boards)", "Up to 5 Make.com automation flows", "Control Tower dashboard for leadership", "2 team training sessions", "Go-live support and handoff week", "30-day post-launch check-in"] },
+  { tier: "Quick Win", price: "From 2,500 ILS", timeline: "2 weeks", featured: false, items: ["Monday.com workspace configured for your business", "Up to 3 operational boards, customized to your workflows", "1 Make.com automation flow", "Team walkthrough session (up to 2 hours)", "Full system documentation"] },
+  { tier: "Operations Sprint", price: "From 6,500 ILS", timeline: "4-6 weeks", featured: true, items: ["Everything in Quick Win", "Full Monday.com implementation (up to 8 boards)", "Up to 5 Make.com automation flows", "Control Tower dashboard for leadership", "2 team training sessions", "Go-live support and handoff week", "30-day post-launch check-in"] },
   { tier: "Control Tower", price: "Custom", timeline: "Scoped in Characterization", featured: false, items: ["Everything in Operations Sprint", "Full operational infrastructure design", "Unlimited boards and automation flows", "Custom executive reporting dashboard", "CRM, finance, and HR integrations", "Ongoing monthly support retainer", "Quarterly system optimization"] },
 ];
 
