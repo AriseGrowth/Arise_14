@@ -2,7 +2,7 @@
 // ARISE GROWTH — DATA LAYER (UPDATED v2)
 // ============================================================
 
-export const CALENDLY_URL = "https://calendly.com/david-arisegrowth/30min";
+export const CALENDLY_URL = "https://calendly.com/arisegrowth/30min";
 export const WHATSAPP_URL = "https://wa.me/972528982780";
 export const LINKEDIN_URL = "https://linkedin.com/in/david-swissa";
 
