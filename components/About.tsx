@@ -14,7 +14,7 @@ export default function About() {
             <div className="flex flex-col gap-6">
               {/* Photo placeholder — replace with <img src="/david.jpg"> */}
               <div className="relative w-full rounded-card overflow-hidden" style={{ aspectRatio: "4/3", background: "var(--bg-surface)", border: "1px solid var(--neutral-border)" }}>
-                <img src="/david.jpg" alt="David Suissa" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
                   <div className="w-20 h-20 rounded-full flex items-center justify-center text-[28px] font-[800]" style={{ background: "var(--accent-dim)", color: "var(--accent)" }}>DS</div>
                   <span className="text-[12px]" style={{ color: "var(--neutral-faint)" }}>Add your photo here</span>
                   <span className="text-[11px]" style={{ color: "var(--neutral-faint)" }}>Replace this div with: &lt;img src=&quot;/david.jpg&quot; /&gt;</span>
@@ -60,7 +60,7 @@ export default function About() {
 
             {/* Video placeholder */}
             <div className="rounded-card overflow-hidden relative cursor-pointer group" style={{ background: "var(--bg-surface)", border: "1px solid var(--neutral-border)", aspectRatio: "16/9" }}>
-              <img src="/david.jpg" alt="David Suissa" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
                 <div className="w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-200 group-hover:scale-110" style={{ background: "var(--accent)", color: "var(--bg)" }}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l10 5-10 5V5z"/></svg>
                 </div>
