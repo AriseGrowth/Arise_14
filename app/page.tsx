@@ -26,57 +26,26 @@ export default function HomePage() {
       <Navbar />
 
       <main>
-        {/* 01 Hero */}
         <Hero />
-
-        {/* 02 Client logos */}
         <LogosStrip />
-
-        {/* 03 Positioning */}
         <PositioningStrip />
-
-        {/* 04 Value pillars */}
         <ValuePillars />
-
-        {/* 05–08 Product stories */}
         {productStories.map((story, i) => (
           <ProductStory key={story.id} story={story} alt={i % 2 !== 0} />
         ))}
-
-        {/* 09 Before / After */}
         <BeforeAfter />
-
-        {/* 10 Outcomes */}
         <OutcomeStrip />
-
-        {/* 11 Method */}
         <Method />
-
-        {/* 12 Deliverables / Pricing */}
         <Deliverables />
-
-        {/* 13 Is this for you */}
         <IsThisForYou />
-
-        {/* 14 Results */}
         <Results />
-
-        {/* 15 About David */}
         <About />
-
-        {/* 16 Insights */}
         <InsightsTeaser />
-
-        {/* 17 FAQ */}
         <FAQ />
-
-        {/* 18 Final CTA */}
         <FinalCTA />
       </main>
 
       <Footer />
-
-      {/* Floating: WhatsApp + mobile sticky bar */}
       <FloatingCTA />
     </>
   );
