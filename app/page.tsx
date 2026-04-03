@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import LogosStrip from "@/components/LogosStrip";
 import PositioningStrip from "@/components/PositioningStrip";
 import ValuePillars from "@/components/ValuePillars";
+import ChaosNarrative from "@/components/ChaosNarrative";
 import ProductStory from "@/components/ProductStory";
 import BeforeAfter from "@/components/BeforeAfter";
 import OutcomeStrip from "@/components/OutcomeStrip";
@@ -10,9 +11,9 @@ import Method from "@/components/Method";
 import Deliverables from "@/components/Deliverables";
 import IsThisForYou from "@/components/IsThisForYou";
 import Results from "@/components/Results";
+import About from "@/components/About";
 import InsightsTeaser from "@/components/InsightsTeaser";
 import FAQ from "@/components/FAQ";
-import About from "@/components/About";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -24,11 +25,11 @@ export default function HomePage() {
     <>
       <ScrollProgress />
       <Navbar />
-
       <main>
         <Hero />
         <LogosStrip />
         <PositioningStrip />
+        <ChaosNarrative />
         <ValuePillars />
         {productStories.map((story, i) => (
           <ProductStory key={story.id} story={story} alt={i % 2 !== 0} />
@@ -44,7 +45,6 @@ export default function HomePage() {
         <FAQ />
         <FinalCTA />
       </main>
-
       <Footer />
       <FloatingCTA />
     </>
