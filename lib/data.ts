@@ -1,7 +1,7 @@
 export const CALENDLY_URL = "https://calendly.com/arisegrowth";
-export const WHATSAPP_URL = "https://wa.me/972500000000";
+export const WHATSAPP_URL = "https://wa.me/972528982780";
 export const LINKEDIN_URL = "https://linkedin.com/in/david-suissa";
-export const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
+export const FORMSPREE_ID = "xreolwva";
 
 export const navLinks = [
   { label: "Systems", href: "#systems" },
@@ -114,9 +114,75 @@ export const isThisForYou = {
 };
 
 export const deliverables = [
-  { tier: "Quick Win", price: "From 2,500 ILS", timeline: "2 weeks", featured: false, items: ["Monday.com workspace configured for your business", "Up to 3 operational boards, customized to your workflows", "1 Make.com automation flow", "Team walkthrough session (up to 2 hours)", "Full system documentation"] },
-  { tier: "Operations Sprint", price: "From 6,500 ILS", timeline: "4-6 weeks", featured: true, items: ["Everything in Quick Win", "Full Monday.com implementation (up to 8 boards)", "Up to 5 Make.com automation flows", "Control Tower dashboard for leadership", "2 team training sessions", "Go-live support and handoff week", "30-day post-launch check-in"] },
-  { tier: "Control Tower", price: "Custom", timeline: "Scoped in Characterization", featured: false, items: ["Everything in Operations Sprint", "Full operational infrastructure design", "Unlimited boards and automation flows", "Custom executive reporting dashboard", "CRM, finance, and HR integrations", "Ongoing monthly support retainer", "Quarterly system optimization"] },
+  {
+    tierHE: "אפיון ומיפוי",
+    tier: "Paid Discovery",
+    price: "₪1,000",
+    timeline: "3–5 hours",
+    featured: false,
+    items: [
+      "Deep operational audit with leadership",
+      "Current workflow + bottleneck mapping",
+      "System architecture blueprint",
+      "Strategic recommendations report",
+      "Roadmap for implementation",
+    ],
+    itemsHE: [
+      "אודיט תפעולי עמוק עם ההנהלה",
+      "מיפוי תהליכים קיימים וצווארי בקבוק",
+      "אפיון ארכיטקטורת המערכת",
+      "דוח המלצות אסטרטגיות",
+      "רודמאפ להטמעה",
+    ],
+  },
+  {
+    tierHE: "הקמה והטמעה",
+    tier: "System Setup",
+    price: "₪20,000",
+    timeline: "14 working days",
+    featured: true,
+    items: [
+      "Everything in Paid Discovery",
+      "Full Monday.com implementation (unlimited boards)",
+      "Up to 5 Make.com automation flows",
+      "Control Tower executive dashboard",
+      "2 team training sessions",
+      "Go-live support week",
+      "30-day post-launch check-in",
+    ],
+    itemsHE: [
+      "כל מה שבאפיון ומיפוי",
+      "הטמעת Monday.com מלאה (לוחות ללא הגבלה)",
+      "עד 5 אוטומציות Make.com",
+      "דשבורד Control Tower להנהלה",
+      "2 סשני הדרכה לצוות",
+      "תמיכה בשבוע ה-go-live",
+      "צ׳ק-אין 30 יום לאחר השקה",
+    ],
+  },
+  {
+    tierHE: "ליווי שוטף",
+    tier: "Fractional CTO",
+    price: "₪2,500/month",
+    timeline: "Ongoing",
+    featured: false,
+    items: [
+      "Everything in System Setup",
+      "Monthly system optimization session",
+      "Unlimited WhatsApp support",
+      "New automations as needed",
+      "Quarterly strategic review",
+      "Priority response within 4 hours",
+    ],
+    itemsHE: [
+      "כל מה שבהקמה והטמעה",
+      "סשן אופטימיזציה חודשי",
+      "תמיכה בוואטסאפ ללא הגבלה",
+      "אוטומציות חדשות לפי צורך",
+      "סקירה אסטרטגית רבעונית",
+      "מענה עדיפות תוך 4 שעות",
+    ],
+  },
 ];
 
 export const beforeAfterItems = [

@@ -79,7 +79,7 @@ export default function Footer() {
           <div id="contact-info">
             <h4 className="text-[11px] font-[600] uppercase tracking-widest mb-5" style={{ color: "var(--neutral-muted)" }}>Contact</h4>
             <div className="flex flex-col gap-3">
-              <a href="mailto:david@arisegrowth.io" className="text-[13.5px] font-[300] transition-colors duration-200" style={{ color: "var(--neutral-faint)" }} onMouseEnter={e => (e.currentTarget.style.color = "var(--accent)")} onMouseLeave={e => (e.currentTarget.style.color = "var(--neutral-faint)")}>david@arisegrowth.com</a>
+              <a href="mailto:david@arisegrowth.io" className="text-[13.5px] font-[300] transition-colors duration-200" style={{ color: "var(--neutral-faint)" }} onMouseEnter={e => (e.currentTarget.style.color = "var(--accent)")} onMouseLeave={e => (e.currentTarget.style.color = "var(--neutral-faint)")}>david@arisegrowth.io</a>
               <p className="text-[13px] font-[300]" style={{ color: "var(--neutral-faint)" }}>Tel Aviv, Israel</p>
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-[13.5px] font-[300] transition-colors duration-200" style={{ color: "var(--neutral-faint)" }} onMouseEnter={e => (e.currentTarget.style.color = "var(--neutral)")} onMouseLeave={e => (e.currentTarget.style.color = "var(--neutral-faint)")}>LinkedIn →</a>
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="inline-block text-[13px] font-[600] px-4 py-2 rounded-[6px] mt-2 transition-opacity duration-200 hover:opacity-88" style={{ background: "var(--accent)", color: "var(--bg)" }}>Book a Call</a>

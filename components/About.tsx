@@ -22,6 +22,17 @@ export default function About() {
                   alt="David Suissa — Arise Growth"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  onError={e => {
+                    const el = e.currentTarget as HTMLImageElement;
+                    el.style.display = "none";
+                    const parent = el.parentElement;
+                    if (parent) {
+                      const fallback = document.createElement("div");
+                      fallback.style.cssText = "width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--bg-surface);font-size:48px;font-weight:800;color:var(--accent);letter-spacing:-0.02em;";
+                      fallback.textContent = "DS";
+                      parent.insertBefore(fallback, el);
+                    }
+                  }}
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(15,13,12,0.6) 0%, transparent 60%)" }}/>
