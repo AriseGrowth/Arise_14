@@ -1,75 +1,95 @@
 "use client";
+import { useLang } from "@/context/LanguageContext";
+import { t, tr } from "@/lib/translations";
+import { CALENDLY_URL } from "@/lib/data";
 import RevealWrapper from "@/components/ui/RevealWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
-import { CALENDLY_URL } from "@/lib/data";
 
 export default function About() {
+  const { lang, isHE } = useLang();
+
   return (
     <section className="py-[140px]" id="about" style={{ backgroundColor: "var(--bg)" }}>
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
-          {/* Left: photo + credentials */}
+          {/* Photo + credentials */}
           <RevealWrapper>
             <div className="flex flex-col gap-6">
-              {/* Photo placeholder — replace with <img src="/david.jpg"> */}
-              <div className="relative w-full rounded-card overflow-hidden" style={{ aspectRatio: "4/3", background: "var(--bg-surface)", border: "1px solid var(--neutral-border)" }}>
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center text-[28px] font-[800]" style={{ background: "var(--accent-dim)", color: "var(--accent)" }}>DS</div>
-                  <span className="text-[12px]" style={{ color: "var(--neutral-faint)" }}>Add your photo here</span>
-                  <span className="text-[11px]" style={{ color: "var(--neutral-faint)" }}>Replace this div with: &lt;img src=&quot;/david.jpg&quot; /&gt;</span>
+              <div className="relative w-full rounded-card overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                <img
+                  src="/david.jpg"
+                  alt="David Suissa — Arise Growth"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(15,13,12,0.6) 0%, transparent 60%)" }}/>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-[13px] font-[600]" style={{ color: "var(--neutral)" }}>דוד סויסא — David Suissa</p>
+                  <p className="text-[11px] font-[400]" style={{ color: "var(--neutral-muted)" }}>{isHE ? "מייסד ומנכ״ל, Arise Growth" : "Founder & CEO, Arise Growth"}</p>
                 </div>
               </div>
-              {/* Credentials */}
+
               <div className="grid grid-cols-2 gap-3">
-                {[
-                  { label: "Military", value: "Intelligence Officer" },
-                  { label: "Clinical", value: "Social Worker B.Sc." },
-                  { label: "Certified", value: "Monday.com Partner" },
-                  { label: "Based in", value: "Tel Aviv, Israel" },
-                ].map((c, i) => (
+                {t.about.credentials.map((c, i) => (
                   <div key={i} className="rounded-card p-4" style={{ background: "var(--bg-surface)", border: "1px solid var(--neutral-border)" }}>
-                    <div className="text-[9px] font-[600] uppercase tracking-widest mb-1" style={{ color: "var(--neutral-faint)" }}>{c.label}</div>
-                    <div className="text-[13px] font-[500]" style={{ color: "var(--neutral)" }}>{c.value}</div>
+                    <div className="text-[9px] font-[600] uppercase tracking-widest mb-1" style={{ color: "var(--neutral-faint)" }}>{tr(c.label, lang)}</div>
+                    <div className="text-[13px] font-[500]" style={{ color: "var(--neutral)" }}>{tr(c.value, lang)}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Stats row */}
+              <div className="grid grid-cols-3 gap-3">
+                {[
+                  { num: "1,500+", label: isHE ? "משתמשים הוטמעו" : "users onboarded" },
+                  { num: "10,000+", label: isHE ? "שעות הטמעה" : "hours implemented" },
+                  { num: "1,000+", label: isHE ? "שעות טיפול" : "therapy hours" },
+                ].map((s, i) => (
+                  <div key={i} className="rounded-card p-4 text-center" style={{ background: "var(--accent-dim)", border: "1px solid var(--accent-border)" }}>
+                    <div className="text-[20px] font-[800] mb-0.5" style={{ color: "var(--accent)", letterSpacing: "-0.02em" }}>{s.num}</div>
+                    <div className="text-[10px] font-[400] leading-tight" style={{ color: "var(--neutral-muted)" }}>{s.label}</div>
                   </div>
                 ))}
               </div>
             </div>
           </RevealWrapper>
 
-          {/* Right: story */}
+          {/* Story */}
           <RevealWrapper delay={0.12}>
-            <SectionLabel>About David</SectionLabel>
-            <h2 className="text-display-md font-[700] mt-2 mb-6" style={{ color: "var(--neutral)", letterSpacing: "-0.022em" }}>
-              Two careers.<br />One operating system.
+            <SectionLabel>{tr(t.about.sectionLabel, lang)}</SectionLabel>
+            <h2 className="text-display-md font-[700] mt-2 mb-8" style={{ color: "var(--neutral)", letterSpacing: isHE ? "-0.01em" : "-0.022em", whiteSpace: "pre-line" }}>
+              {tr(t.about.headline, lang)}
             </h2>
-            <p className="text-[16px] font-[300] leading-[1.85] mb-5" style={{ color: "var(--neutral-muted)" }}>
-              Before Arise Growth, David Suissa served as an Intelligence Officer in the Israeli military — building operational systems where precision, visibility, and zero tolerance for information loss were non-negotiable.
+
+            {/* Story blocks */}
+            {[
+              { icon: "🏠", color: "#F87171", bg: "rgba(248,113,113,0.08)", border: "rgba(248,113,113,0.2)", text: t.about.intro },
+              { icon: "💙", color: "#60A5FA", bg: "rgba(96,165,250,0.08)", border: "rgba(96,165,250,0.2)", text: t.about.social },
+              { icon: "⚡", color: "var(--accent)", bg: "var(--accent-dim)", border: "var(--accent-border)", text: t.about.military },
+            ].map((block, i) => (
+              <div key={i} className="flex gap-4 mb-5 rounded-card p-5" style={{ background: block.bg, border: `1px solid ${block.border}` }}>
+                <span className="text-[20px] flex-shrink-0 mt-0.5">{block.icon}</span>
+                <p className="text-[14.5px] font-[300] leading-[1.85]" style={{ color: "var(--neutral)" }}>
+                  {tr(block.text, lang)}
+                </p>
+              </div>
+            ))}
+
+            <p className="text-[15px] font-[300] leading-[1.85] mb-8" style={{ color: "var(--neutral-muted)" }}>
+              {tr(t.about.conclusion, lang)}
             </p>
-            <p className="text-[16px] font-[300] leading-[1.85] mb-5" style={{ color: "var(--neutral-muted)" }}>
-              Later, as a clinical social worker, he learned something most system designers miss: the best-designed process fails if nobody follows it. Adoption is a human problem, not a technical one.
-            </p>
-            <p className="text-[16px] font-[300] leading-[1.85] mb-8" style={{ color: "var(--neutral-muted)" }}>
-              Arise Growth sits at the intersection of both disciplines — operational precision built around human behavior. Every system we design is tested not just for logic, but for adoption.
-            </p>
-            <div className="rounded-[0_12px_12px_0] p-6 mb-8" style={{ background: "var(--bg-surface)", borderLeft: "3px solid var(--accent)", border: "1px solid var(--neutral-border)", borderLeftColor: "var(--accent)", borderRadius: "0 12px 12px 0" }}>
-              <p className="text-[18px] font-[600] leading-snug" style={{ color: "var(--neutral)", letterSpacing: "-0.01em" }}>
-                &ldquo;Systems fall on people, not on code.&rdquo;
+
+            {/* Quote */}
+            <div className="p-6 mb-8" style={{ background: "var(--bg-surface)", borderInlineStart: "3px solid var(--accent)", borderRadius: "0 12px 12px 0" }}>
+              <p className="text-[18px] font-[700] leading-snug" style={{ color: "var(--accent)", letterSpacing: "-0.01em" }}>
+                &ldquo;{tr(t.about.quote, lang)}&rdquo;
               </p>
             </div>
 
-            {/* Video placeholder */}
-            <div className="rounded-card overflow-hidden relative cursor-pointer group" style={{ background: "var(--bg-surface)", border: "1px solid var(--neutral-border)", aspectRatio: "16/9" }}>
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-200 group-hover:scale-110" style={{ background: "var(--accent)", color: "var(--bg)" }}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l10 5-10 5V5z"/></svg>
-                </div>
-                <span className="text-[13px] font-[500]" style={{ color: "var(--neutral-muted)" }}>Watch: How Arise Growth works (90 sec)</span>
-                <span className="text-[11px]" style={{ color: "var(--neutral-faint)" }}>Replace with your Loom or YouTube embed</span>
-              </div>
-            </div>
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="inline-block mt-8 text-[14px] font-[600] px-7 py-3.5 rounded-[7px] transition-all duration-200" style={{ background: "var(--accent)", color: "var(--bg)", boxShadow: "0 0 28px rgba(237,165,141,0.2)" }}>
-              Book a Call with David →
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="inline-block text-[14px] font-[600] px-7 py-3.5 rounded-[7px] transition-all duration-200" style={{ background: "var(--accent)", color: "var(--bg)", boxShadow: "0 0 28px rgba(237,165,141,0.2)" }}>
+              {tr(t.about.cta, lang)} →
             </a>
           </RevealWrapper>
         </div>
