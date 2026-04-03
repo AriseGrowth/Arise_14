@@ -9,7 +9,7 @@ export default function BeforeAfter() {
   const isInView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
 
   return (
-    <section ref={ref} className="py-[140px]" style={{ backgroundColor: "var(--bg-surface)" }}>
+    <section ref={ref} className="py-[140px]" dir="ltr" style={{ backgroundColor: "var(--bg-surface)" }}>
       <div className="container">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.65 }} className="mb-16 text-center">
           <SectionLabel align="center">Before & After</SectionLabel>

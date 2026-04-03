@@ -12,13 +12,14 @@ export default function Deliverables() {
   const { lang, isHE } = useLang();
 
   return (
-    <section ref={ref} className="py-[140px]" id="deliverables" style={{ backgroundColor: "var(--bg-alt)" }}>
+    <section ref={ref} className="py-[140px]" id="deliverables" dir="ltr" style={{ backgroundColor: "var(--bg-alt)" }}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.65 }}
           className="mb-16"
+          dir={isHE ? "rtl" : "ltr"}
         >
           <SectionLabel>{tr(t.deliverables.sectionLabel, lang)}</SectionLabel>
           <h2 className="text-display-md font-[700] mt-2 max-w-[520px]" style={{ color: "var(--neutral)", letterSpacing: "-0.022em", whiteSpace: "pre-line" }}>
@@ -53,11 +54,27 @@ export default function Deliverables() {
               )}
               <div className="mb-6">
                 {/* Hebrew tier name prominent */}
-                <div className="text-[13px] font-[700] mb-0.5" style={{ color: "var(--accent)" }}>{tier.tierHE}</div>
-                <div className="text-[11px] font-[400] mb-3" style={{ color: "var(--neutral-faint)" }}>{tier.tier}</div>
-                <div className="text-[38px] font-[800] leading-none mb-1" style={{ color: "var(--neutral)", letterSpacing: "-0.025em" }}>{tier.price}</div>
-                <div className="text-[12px] font-[400]" style={{ color: "var(--neutral-faint)" }}>{tier.timeline}</div>
+                <div className="text-[15px] font-[700] mb-0.5" style={{ color: "var(--accent)" }} dir="rtl">
+                  {tier.tierHE}
+                </div>
+                <div className="text-[12px] font-[400] mb-3" style={{ color: "var(--neutral-faint)" }}>
+                  {tier.tier}
+                </div>
+                <div className="text-[38px] font-[800] leading-none mb-1" style={{ color: "var(--neutral)", letterSpacing: "-0.025em" }}>
+                  {tier.price}
+                </div>
+                <div className="text-[12px] font-[400]" style={{ color: "var(--neutral-faint)" }}>
+                  {tier.timeline}
+                </div>
               </div>
+
+              {/* Credit note for Blueprint tier */}
+              {"note" in tier && tier.note && (
+                <div className="mb-4 px-3 py-2.5 rounded-md text-[11.5px] font-[400] leading-relaxed" style={{ background: "var(--accent-dim)", border: "1px solid var(--accent-border)", color: "var(--accent)" }} dir={isHE ? "rtl" : "ltr"}>
+                  {isHE ? (tier as { noteHE?: string }).noteHE : tier.note}
+                </div>
+              )}
+
               <div className="h-px mb-6" style={{ background: "var(--neutral-border)" }} />
               <ul className="flex flex-col gap-3 flex-1 mb-8">
                 {(isHE ? tier.itemsHE : tier.items).map((item, j) => (

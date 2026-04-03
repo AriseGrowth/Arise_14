@@ -16,6 +16,7 @@ export default function Method() {
       ref={ref}
       className="py-[140px]"
       id="method"
+      dir="ltr"
       style={{ backgroundColor: "var(--bg)" }}
     >
       <div className="container">

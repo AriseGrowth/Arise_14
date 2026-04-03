@@ -6,6 +6,7 @@ import { positioningStatements } from "@/lib/data";
 export default function PositioningStrip() {
   return (
     <section
+      dir="ltr"
       style={{
         borderTop: "1px solid var(--neutral-border)",
         borderBottom: "1px solid var(--neutral-border)",

@@ -6,7 +6,7 @@ import { valuePillars } from "@/lib/data";
 
 export default function ValuePillars() {
   return (
-    <section className="py-[140px]" id="systems">
+    <section className="py-[140px]" id="systems" dir="ltr">
       <div className="container">
         <RevealWrapper className="mb-20">
           <SectionLabel>Core Value</SectionLabel>

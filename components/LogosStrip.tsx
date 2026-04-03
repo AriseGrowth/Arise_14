@@ -4,7 +4,7 @@ import { clientLogos } from "@/lib/data";
 
 export default function LogosStrip() {
   return (
-    <section style={{ borderBottom: "1px solid var(--neutral-border)", backgroundColor: "var(--bg-surface)" }}>
+    <section dir="ltr" style={{ borderBottom: "1px solid var(--neutral-border)", backgroundColor: "var(--bg-surface)" }}>
       <div className="container py-8">
         <RevealWrapper>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">

@@ -32,6 +32,7 @@ export default function ProductStory({ story, alt = false }: ProductStoryProps) 
       <section
         className="py-[140px]"
         id={story.id}
+        dir="ltr"
         style={{ backgroundColor: alt ? "var(--bg-alt)" : "var(--bg)" }}
       >
         <div className="container">
@@ -75,6 +76,7 @@ export default function ProductStory({ story, alt = false }: ProductStoryProps) 
     <section
       className="py-[140px] overflow-hidden"
       id={story.id}
+      dir="ltr"
       style={{ backgroundColor: alt ? "var(--bg-alt)" : "var(--bg)" }}
     >
       <div className="container">
