@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
 import { t, tr } from "@/lib/translations";
 import { CALENDLY_URL } from "@/lib/data";
+import ScrollRevealText from "@/components/ui/ScrollRevealText";
 
 export default function ChaosNarrative() {
   const ref = useRef(null);
@@ -27,9 +28,16 @@ export default function ChaosNarrative() {
             <h2 className="font-[700] mb-8" style={{ color: "var(--neutral)", letterSpacing: isHE ? "-0.01em" : "-0.022em", lineHeight: "1.1", fontSize: "clamp(28px,4vw,48px)", whiteSpace: "pre-line" }}>
               {tr(t.chaos.headline, lang)}
             </h2>
-            <p className="text-[16px] font-[300] leading-[1.9] mb-8" style={{ color: "var(--neutral-muted)" }}>
-              {tr(t.chaos.story, lang)}
-            </p>
+            <ScrollRevealText
+              text={tr(t.chaos.story, lang)}
+              as="p"
+              className="text-[16px] font-[300] leading-[1.9] mb-8"
+              style={{ color: "var(--neutral-muted)" }}
+              dimColor="rgba(107,99,96,0.4)"
+              brightColor="#E9E6E3"
+              startOffset={0.9}
+              endOffset={0.05}
+            />
             <div className="rounded-card p-5 mb-8" style={{ background: "rgba(237,165,141,0.07)", border: "1px solid var(--accent-border)" }}>
               <p className="text-[17px] font-[600]" style={{ color: "var(--accent)" }}>
                 {tr(t.chaos.conclusion, lang)}

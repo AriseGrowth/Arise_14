@@ -4,6 +4,7 @@ import { t, tr } from "@/lib/translations";
 import { CALENDLY_URL } from "@/lib/data";
 import RevealWrapper from "@/components/ui/RevealWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
+import ScrollRevealText from "@/components/ui/ScrollRevealText";
 
 export default function About() {
   const { lang, isHE } = useLang();
@@ -82,21 +83,40 @@ export default function About() {
             ].map((block, i) => (
               <div key={i} className="flex gap-4 mb-5 rounded-card p-5" style={{ background: block.bg, border: `1px solid ${block.border}` }}>
                 <span className="text-[20px] flex-shrink-0 mt-0.5">{block.icon}</span>
-                <p className="text-[14.5px] font-[300] leading-[1.85]" style={{ color: "var(--neutral)" }}>
-                  {tr(block.text, lang)}
-                </p>
+                <ScrollRevealText
+                  text={tr(block.text, lang)}
+                  as="p"
+                  className="text-[14.5px] font-[300] leading-[1.85]"
+                  dimColor="rgba(107,99,96,0.45)"
+                  brightColor="#E9E6E3"
+                  startOffset={0.88}
+                  endOffset={0.05}
+                />
               </div>
             ))}
 
-            <p className="text-[15px] font-[300] leading-[1.85] mb-8" style={{ color: "var(--neutral-muted)" }}>
-              {tr(t.about.conclusion, lang)}
-            </p>
+            <ScrollRevealText
+              text={tr(t.about.conclusion, lang)}
+              as="p"
+              className="text-[15px] font-[300] leading-[1.85] mb-8"
+              dimColor="rgba(107,99,96,0.4)"
+              brightColor="#B0A89F"
+              startOffset={0.88}
+              endOffset={0.05}
+            />
 
             {/* Quote */}
             <div className="p-6 mb-8" style={{ background: "var(--bg-surface)", borderInlineStart: "3px solid var(--accent)", borderRadius: "0 12px 12px 0" }}>
-              <p className="text-[18px] font-[700] leading-snug" style={{ color: "var(--accent)", letterSpacing: "-0.01em" }}>
-                &ldquo;{tr(t.about.quote, lang)}&rdquo;
-              </p>
+              <ScrollRevealText
+                text={`"${tr(t.about.quote, lang)}"`}
+                as="p"
+                className="text-[18px] font-[700] leading-snug"
+                style={{ letterSpacing: "-0.01em" }}
+                dimColor="rgba(237,165,141,0.35)"
+                brightColor="#EDA58D"
+                startOffset={0.88}
+                endOffset={0.1}
+              />
             </div>
 
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="inline-block text-[14px] font-[600] px-7 py-3.5 rounded-[7px] transition-all duration-200" style={{ background: "var(--accent)", color: "var(--bg)", boxShadow: "0 0 28px rgba(237,165,141,0.2)" }}>

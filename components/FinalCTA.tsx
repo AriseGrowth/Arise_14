@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useLang } from "@/context/LanguageContext";
 import { t, tr } from "@/lib/translations";
 import { CALENDLY_URL } from "@/lib/data";
+import ScrollRevealText from "@/components/ui/ScrollRevealText";
 
 export default function FinalCTA() {
   const ref = useRef(null);
@@ -25,9 +26,16 @@ export default function FinalCTA() {
             {tr(t.finalCta.headline2, lang)}{" "}
             <span style={{ color: "var(--accent)" }}>{tr(t.finalCta.highlight, lang)}</span>
           </h2>
-          <p className="font-[300] leading-[1.85] mb-4 max-w-[480px] mx-auto" style={{ color: "var(--neutral-muted)", fontSize: 17 }}>
-            {tr(t.finalCta.sub, lang)}
-          </p>
+          <ScrollRevealText
+            text={tr(t.finalCta.sub, lang)}
+            as="p"
+            className="font-[300] leading-[1.85] mb-4 max-w-[480px] mx-auto"
+            style={{ fontSize: 17 }}
+            dimColor="rgba(107,99,96,0.45)"
+            brightColor="#B0A89F"
+            startOffset={0.9}
+            endOffset={0.1}
+          />
           <p className="text-[16px] font-[700] mb-14" style={{ color: "var(--accent)", opacity: 0.65 }}>שקט תעשייתי</p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-[14px] font-[600] px-8 py-4 rounded-[7px] transition-all duration-200" style={{ background: "var(--accent)", color: "var(--bg)", boxShadow: "0 0 48px rgba(237,165,141,0.24)" }}>
